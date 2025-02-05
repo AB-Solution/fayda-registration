@@ -5,7 +5,9 @@ import os
 app = Flask(__name__)
 
 UPLOAD_FOLDER = "uploads"
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)  # Ensures uploads/ is created
+
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 TELEGRAM_BOT_TOKEN = os.getenv("7625727167:AAG1bDkcgBPjNsfqdSMTiFLWePawxjGFNlw")  # Store in environment variable
 ADMIN_CHAT_ID = os.getenv("364010528")  # Store your Telegram chat ID securely
