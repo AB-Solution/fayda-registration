@@ -73,7 +73,7 @@
             const formData = new FormData(document.getElementById('uploadForm'));
 
             try {
-                let response = await fetch('/submit', { method: 'POST', body: formData });
+                let response = await fetch('https://fayda-registration.onrender.com/submit', { method: 'POST', body: formData });
                 let result = await response.json();
                 
                 if (result.status === 'success') {
